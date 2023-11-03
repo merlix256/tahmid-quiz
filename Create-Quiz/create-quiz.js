@@ -54,7 +54,9 @@ function addQuestion() {
     answersTigrigna.push(document.getElementById(`answer${i}-tigrigna`).value);
   }
   const correct = document.getElementById("correct").value;
+  const tags = document.getElementById("tags").value.split(",").map(tag => tag.trim());
 
+  
   // Push the question data to the database
   const questionData = {
     question: question,
@@ -63,6 +65,7 @@ function addQuestion() {
     answers: answers,
     answersTigrigna: answersTigrigna,
     correctAnswer: correct,
+    tags: tags,
   };
   push(questionsInDB, questionData);
 
@@ -72,16 +75,17 @@ function addQuestion() {
   questionItem.classList.add("question-item");
   questionItem.innerHTML = `
     <div class="question-container">
-    <h3 class="question">${question}</h3>
-    <p>Translation: ${questionTigrigna}</p>
-    <img src="${image}" alt="Question Image" class="question-image">
-    <p>Answers:</p>
-    <ol class="answer-list">
+      <h3 class="question">${question}</h3>
+      <p>Translation: ${questionTigrigna}</p>
+      <p>Tags: ${tags.join(", ")}</p>
+      <img src="${image}" alt="Question Image" class="question-image">
+      <p>Answers:</p>
+      <ol class="answer-list">
         ${answers.map((answer, index) => `<li>${answer} - ${answersTigrigna[index]}</li>`).join("")}
-    </ol>
-    <p>Correct Answer: <span class="correct-answer">${correct}</span></p>
+      </ol>
+      <p>Correct Answer: <span class="correct-answer">${correct}</span></p>
     </div>
-    `;
+  `;
   questionsList.appendChild(questionItem);
 
   // Clear input fields after adding the question
@@ -99,6 +103,7 @@ function clearInputs() {
   }
   document.getElementById("correct").value = "";
   document.getElementById("translation").value = "";
+ 
 }
 
 function resetState() {
