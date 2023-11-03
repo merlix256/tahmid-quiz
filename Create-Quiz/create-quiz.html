@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Maker</title>
+    <link rel="stylesheet" type="text/css" href="create-quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question Maker</h1>
+        <div id="question-form">
+            <label for="question">Question (Dutch):</label>
+            <input type="text" id="question" name="question" required><br><br>
+            <label for="question-tigrigna">Question (Tigrigna):</label>
+            <input type="text" id="question-tigrigna" name="question-tigrigna" required><br><br>
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="image"><br><br>
+            <div id="answer-container">
+                <label for="answer1">Answer 1 (Dutch):</label>
+                <input type="text" id="answer1" name="answer1" required>
+                <label for="answer1-tigrigna">Answer 1 (Tigrigna):</label>
+                <input type="text" id="answer1-tigrigna" name="answer1-tigrigna" required><br><br>
+            </div>
+            <button id="addAnswerButton">Add Answer</button><br><br>
+            <label for="correct">Correct Answer (1-4):</label>
+            <input type="number" id="correct" name="correct" min="1" max="4" required><br><br>
+            <button id="addQuestionButton">Add Question</button>
+        </div>
+        <div id="questions-list"></div>
+    </div>
+
+    <!-- Include the Firebase scripts directly -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js"></script>
+    <script type="module" src="create-quiz.js"></script>
+</body>
+</html>
