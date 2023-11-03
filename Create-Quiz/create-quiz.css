@@ -10,7 +10,7 @@ body {
 .container {
     background: #fff;
     width: 90%;
-    max-width: 400px;
+    max-width: 700px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
@@ -80,20 +80,30 @@ input[type="number"] {
     color: #001e4d;
 }
 
-/* Media query for mobile screens */
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
     .container {
-        width: 90%;
-        max-width: 100%;
+        width: 95%;
     }
-    
+
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 10px);
+    }
+
+    .question-container {
+        align-items: center;
+        text-align: center;
+    }
+
     .question {
         font-size: 20px;
     }
-    
-    .question-image {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
+
+    #answer-container div {
+        text-align: center;
+    }
+
+    body {
+        display: block;
     }
 }

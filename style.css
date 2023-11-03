@@ -147,53 +147,35 @@ body {
   border-radius: 10px;
 }
 
-/* CSS for mobile screens */
-@media only screen and (max-width: 600px) {
-  .app {
-    margin: 40px auto 0;
-    padding: 20px;
+@media only screen and (max-width: 768px) {
+  .container {
+      width: 95%;
   }
 
-  .app h1 {
-    font-size: 24px;
-    padding-bottom: 20px;
+  input[type="text"],
+  input[type="number"] {
+      width: calc(100% - 10px);
   }
 
-  .quiz {
-    padding: 20px 0;
+  .question-container {
+      align-items: center;
+      text-align: center;
   }
 
-  .quiz h2 {
-    font-size: 18px;
+  .question {
+      font-size: 20px;
   }
 
-  .btn {
-    padding: 12px;
-    margin: 10px 0;
+  #answer-container div {
+      text-align: center;
   }
 
-  #next-btn {
-    width: 150px;
-    padding: 12px;
+  body {
+      display: block;
   }
 
-  .translation {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-left: 8px;
-  }
-
-  .close {
-    top: 15px;
-    right: 35px;
-    font-size: 40px;
-  }
-
-  .image-container {
-    margin-bottom: 10px;
-  }
-
-  #myImage {
-    border-radius: 5px;
+  .container,
+  .container button {
+      width: 100%;
   }
 }
