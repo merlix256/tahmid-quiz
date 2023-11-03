@@ -13,8 +13,8 @@ body {
 .app {
   background: #fff;
   width: 100%;
-  max-width: 800px;
-  margin: 80px auto 0;
+  max-width: 900px;
+  margin: 50px auto 0;
   border-radius: 10px;
   padding: 40px;
 }
@@ -32,15 +32,18 @@ body {
 }
 
 .quiz h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: #001e4d;
+  
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .btn {
   background: white;
   color: #222;
-  font-weight: 500;
+  font-size: larger;
   width: 100%;
   border: 1px solid #222;
   border-radius: 5px;
@@ -121,11 +124,11 @@ body {
 }
 
 .translation {
-  font-size: 20px;
+  font-size: 24px;
   color: #0368ec;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-radius: 5px;
+  margin-top: 9px;
+  margin-left: 8px;
+  
   align-items: center;
   justify-content: flex-start;
 }
