@@ -3,11 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tahmids-Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #001e4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .container h1 {
+            font-size: 25px;
+            color: #001e4d;
+            font-weight: 600;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        .container a {
+            display: block;
+            background: white;
+            color: #222;
+            font-weight: 500;
+            width: 100%;
+            border: 1px solid #222;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .container a:hover:not([disabled]) {
+            background: #222;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .container a:disabled {
+            cursor: no-drop;
+        }
+    </style>
 </head>
-<body>
-    
-    <a href="quiz.html">play Quiz</a>
-    <a href="Create-Quiz/create-quiz.html">create-quiz</a>
+<body id="index-body">
+    <div class="container">
+        <h1>Tahmids Quiz</h1>
+        <a href="quiz.html" class="btn">Play Quiz</a>
+        <a href="Create-Quiz/create-quiz.html" class="btn">Create Quiz</a>
+    </div>
 </body>
 </html>

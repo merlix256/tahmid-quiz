@@ -12,26 +12,26 @@ body {
 .app {
   background: #fff;
   width: 100%;
-  max-width: 600px;
-  margin: 100px auto 0;
+  max-width: 800px;
+  margin: 80px auto 0;
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px;
 }
 
 .app h1 {
-  font-size: 25px;
+  font-size: 30px;
   color: #001e4d;
   font-weight: 600;
   border-bottom: 1px solid #333;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .quiz {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .quiz h2 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #001e4d;
 }
@@ -43,8 +43,8 @@ body {
   width: 100%;
   border: 1px solid #222;
   border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 15px;
+  margin: 15px 0;
   cursor: pointer;
   text-align: left;
   font-weight: 900;
@@ -64,12 +64,12 @@ body {
   background: #001e4d;
   color: #fff;
   font-weight: 500;
-  width: 150px;
+  width: 200px;
   border: 0;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   display: none;
 }
 
@@ -105,9 +105,9 @@ body {
 .close {
   color: #aaa;
   position: absolute;
-  top: 15px;
-  right: 35px;
-  font-size: 40px;
+  top: 20px;
+  right: 45px;
+  font-size: 50px;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -120,16 +120,30 @@ body {
 }
 
 .translation {
-  font-size: 18px;
+  font-size: 20px;
   color: #0368ec;
-  margin-top: 5px;
-  margin-left: 5px;
- 
+  margin-top: 10px;
+  margin-left: 10px;
   border-radius: 5px;
   align-items: center;
   justify-content: flex-start;
 }
 
-#translation-btn:hover{
-background-color: #0368ec;
+#translation-btn:hover {
+  background-color: #0368ec;
+}
+
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#myImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
