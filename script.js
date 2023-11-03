@@ -137,13 +137,16 @@ function resetState() {
 
 // Handling the selection of an answer by the user
 function selectAnswer(e) {
-    const selectedBtn = e.target;
+    let selectedBtn = e.target;
+    if (selectedBtn.tagName == "P") {  // Check if user clicked on the translation instead of the button
+        selectedBtn = selectedBtn.parentNode;  // If yes, set the selected button to the parent node which is the actual button
+    }
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
-        selectedBtn.classList.add("correct"); // Adding the 'correct' class to the selected button if the answer is correct
-        score++; // Incrementing the score if the answer is correct
+        selectedBtn.classList.add("correct");  // Adding the 'correct' class to the selected button if the answer is correct
+        score++;  // Incrementing the score if the answer is correct
     } else {
-        selectedBtn.classList.add("incorrect"); // Adding the 'incorrect' class to the selected button if the answer is incorrect
+        selectedBtn.classList.add("incorrect");  // Adding the 'incorrect' class to the selected button if the answer is incorrect
     }
     // Disabling all the answer buttons and showing the 'Next' button
     Array.from(answerButtons.children).forEach((button) => {
@@ -162,10 +165,12 @@ function showScore() {
     nextButton.innerHTML = "Restart Quiz"; // Changing the text of the 'Next' button to 'Restart Quiz'
     nextButton.style.display = "block"; // Displaying the 'Next' button
     imageElement.style.display = "none"; // Hiding the image element
+    
 }
 
 // Handling the 'Next' button to proceed to the next question or restart the quiz
 function handleNextButton() {
+    
     currentQuestionIndex++; // Incrementing the current question index
     if (currentQuestionIndex < questions.length) {
         showQuestion(); // Displaying the next question if available
