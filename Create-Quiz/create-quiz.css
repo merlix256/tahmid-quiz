@@ -9,7 +9,8 @@ body {
 
 .container {
     background: #fff;
-    width: 50%;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
@@ -50,7 +51,6 @@ input[type="number"] {
     margin-bottom: 10px;
 }
 
-
 .question-container {
     display: flex;
     flex-direction: column;
@@ -65,7 +65,8 @@ input[type="number"] {
 }
 
 .question-image {
-    max-width: 200px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -77,4 +78,22 @@ input[type="number"] {
 .correct-answer {
     font-weight: bold;
     color: #001e4d;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        max-width: 100%;
+    }
+    
+    .question {
+        font-size: 20px;
+    }
+    
+    .question-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
 }
